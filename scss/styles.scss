@@ -37,7 +37,7 @@
 */
 
 // Define base and accent colors
-$base-color: #f5bb65;
+$base-color: #C0B283;
 $base-color-hover: darken($base-color, 10%);
 // Define background colors
 $background: #fff;
@@ -45,7 +45,7 @@ $background-alt: #f2f2f5;
 // Define border colors
 $border: #dcd9d9;
 // Define text colors
-$heading: #374054;
+$heading: #373737;
 $text: #74808a;
 
 /*
@@ -338,17 +338,21 @@ footer {
 }
 
 @keyframes blink {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .actor__content {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .actor__content--typing::after {
-  content: '|';
-  animation: blink 500ms infinite;
+    content: '|';
+    animation: blink 500ms infinite;
 }
 
 #lead {
@@ -356,7 +360,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/GOPR0856.Imagen%20fija010.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -382,7 +386,7 @@ footer {
         line-height: 0.9em;
     }
     h2 {
-        color: lighten($base-color, 25%);
+        color: $heading;
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -448,7 +452,7 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
+    padding: 75px 15px 75px 15px;
     border-bottom: 1px solid $border;
     h2 {
         color: $heading;
@@ -457,6 +461,25 @@ footer {
         color: $text;
         margin: 0;
     }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 154px;
+        border-radius: 50%;
+    }
+    li {
+        display: block;
+        list-style: none;
+    }
+}
+
+.col-md-8 {
+    text-align: left;
+}
+
+#about {
+    text-align: center;
 }
 
 
@@ -642,10 +665,18 @@ footer {
 
 .project-image {
     float: left;
+    img {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 .project-image-rev {
     float: right;
+    img {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 .project-info {
@@ -935,7 +966,16 @@ footer {
     .project-image {
         display: none;
     }
+    .project-image-rev {
+        display: none;
+    }
     .project-info {
+        position: relative;
+        margin: 0;
+        top: auto;
+        transform: none;
+    }
+    .project-info-rev {
         position: relative;
         margin: 0;
         top: auto;
